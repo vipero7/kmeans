@@ -8,7 +8,7 @@ import mysql.connector
 dbconfig = {'host': '127.0.0.1',
             'database': 'travel_feed',
             'user': 'root',
-            'password': '7787',
+            'password': '',
             }
 conn = mysql.connector.connect(**dbconfig)
 cursor = conn.cursor()
@@ -19,7 +19,7 @@ data = np.array(d)
 # print(data)
 id= data[:,0]
 # print(type(id));
-X = data[:,[1,2,3,5,5,6,7,8,9,10,11,12]]
+X = data[:,[1:]]
 
 # print(X);
 
